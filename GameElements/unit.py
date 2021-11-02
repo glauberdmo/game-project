@@ -7,13 +7,6 @@ class _Unit:
         self.range = range
         self.alive = True
         self.move_points = move_points
-
-    def move(self,x:int,y:int):
-        if x+y>self.movePoints:
-            print("You can't move that far")
-        else:
-            self.x += x
-            self.y += y
     
     def __repr__(self):
         return f"_Unit(x={self.x},y={self.y},life={self.life},strenght={self.strenght},range={self.range})"
@@ -21,11 +14,9 @@ class _Unit:
 
 class Warrior(_Unit):
     """
-
         Warrior can move 4 spaces at a time, and has a range of 1
         Strength: 5
         Life: 10
-
     """
 
     def __init__(self,initial_x:int,initial_y:int):
