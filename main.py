@@ -9,6 +9,8 @@ def main():
     currentBoardgame.add_unit(warrior2)
     currentBoardgame.print_board()
     currentBoardgame.move_unit(currentBoardgame.get_unit_by_xy(1,1),2,3)
+    currentBoardgame.attack_unit(currentBoardgame.get_unit_by_xy(2,3),currentBoardgame.get_unit_by_xy(1,1))
+    currentBoardgame.attack_unit(currentBoardgame.get_unit_by_xy(2,3),currentBoardgame.get_unit_by_xy(1,1))
     currentBoardgame.print_board()
 
 main()

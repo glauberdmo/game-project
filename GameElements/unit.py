@@ -10,7 +10,21 @@ class _Unit:
     
     def __repr__(self):
         return f"_Unit(x={self.x},y={self.y},life={self.life},strenght={self.strenght},range={self.range})"
-        
+
+    def attack(self,enemy):
+            enemy.life -= self.strenght
+            print(f"{self.__repr__()} attacked {enemy.__repr__()} with {self.strenght} of damage")
+            if enemy.life <= 0:
+                enemy.alive = False
+                print(f"{enemy.__repr__()} is dead")
+            else:
+                print(f"{enemy.__repr__()} has {enemy.life} life left")
+            if enemy.life <= 0:
+                enemy.alive = False
+                enemy.life = 0                
+                print(f"{enemy.__class__.__name__} is dead")
+            else:
+                print(f"{enemy.__class__.__name__} is alive with {enemy.life} life")   
 
 class Warrior(_Unit):
     """
